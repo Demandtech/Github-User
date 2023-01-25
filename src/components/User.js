@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import Card from './Card';
 import Followers from './Followers';
 const User = () => {
-  return <section className='section'>
+  return <section className='section section-center'>
      <Wrapper>
          <Card/>
          <Followers />
