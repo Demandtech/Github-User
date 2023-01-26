@@ -6,7 +6,7 @@ import { FiUsers, FiUserPlus } from 'react-icons/fi'
 
 const UserInfo = () => {
   const { githubUser } = React.useContext(GithubContext)
-  const { public_repos, followers, following, public_gist } = githubUser
+  const { public_repos, followers, following, public_gists } = githubUser
 
   const items = [
     {
@@ -32,9 +32,9 @@ const UserInfo = () => {
     },
     {
       id: 4,
-      icon: <FiUserPlus className='icon' />,
+      icon: <GoGist className='icon' />,
       label: 'gist',
-      value: public_gist,
+      value: public_gists,
       color: 'yellow',
     },
   ]
@@ -49,10 +49,11 @@ const UserInfo = () => {
 }
 
 const Item = ({icon,label,value, color})=> {
+ 
  return <article className='item'>
      <span className={color}>{icon}</span>
      <div>
-      <h3>{value || 0}</h3>
+      <h3>{value}</h3>
        <p>{label}</p>
      </div>
  </article>

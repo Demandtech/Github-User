@@ -27,9 +27,10 @@ const Card = () => {
           <MdLocationOn />
           {location || 'somewhere around'}
         </p>
-        <a href={`https://${blog || 'https://my-portofiio.vercel.app/'}`}>
-          www.https://my-portofiio.vercel.app/
-        </a>
+        <p style={{display: 'flex', alignItems:'center', gap: '5px'}}>        
+          <MdLink />
+          <a rel='noreferrer' target={'_blank'} href={`https://${blog}`}>{blog || 'N/A'}</a>
+        </p>
       </div>
     </Wrapper>
   )
@@ -94,7 +95,7 @@ const Wrapper = styled.article`
   .links {
     p,
     a {
-      margin-bottom: 0.25rem;
+      
       display: flex;
       align-items: center;
       svg {
@@ -113,5 +114,5 @@ const Wrapper = styled.article`
       }
     }
   }
-`;
+`
 export default Card;
